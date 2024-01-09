@@ -3,9 +3,9 @@ Smart_Home.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000ad0  00000000  00000000  00000074  2**1
+  0 .text         00000b64  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000070  00800060  00000ad0  00000b44  2**0
+  1 .data         000000ac  00800060  00000b64  00000bd8  2**0
                   CONTENTS, ALLOC, LOAD, DATA
 
 Disassembly of section .text:
@@ -42,11 +42,11 @@ Disassembly of section .text:
   5e:	cd bf       	out	0x3d, r28	; 61
 
 00000060 <__do_copy_data>:
-  60:	10 e0       	ldi	r17, 0x00	; 0
+  60:	11 e0       	ldi	r17, 0x01	; 1
   62:	a0 e6       	ldi	r26, 0x60	; 96
   64:	b0 e0       	ldi	r27, 0x00	; 0
-  66:	e0 ed       	ldi	r30, 0xD0	; 208
-  68:	fa e0       	ldi	r31, 0x0A	; 10
+  66:	e4 e6       	ldi	r30, 0x64	; 100
+  68:	fb e0       	ldi	r31, 0x0B	; 11
   6a:	02 c0       	rjmp	.+4      	; 0x70 <.do_copy_data_start>
 
 0000006c <.do_copy_data_loop>:
@@ -54,11 +54,11 @@ Disassembly of section .text:
   6e:	0d 92       	st	X+, r0
 
 00000070 <.do_copy_data_start>:
-  70:	a0 3d       	cpi	r26, 0xD0	; 208
+  70:	ac 30       	cpi	r26, 0x0C	; 12
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <.do_copy_data_loop>
-  76:	0e 94 43 05 	call	0xa86	; 0xa86 <main>
-  7a:	0c 94 66 05 	jmp	0xacc	; 0xacc <_exit>
+  76:	0e 94 7c 05 	call	0xaf8	; 0xaf8 <main>
+  7a:	0c 94 b0 05 	jmp	0xb60	; 0xb60 <_exit>
 
 0000007e <__bad_interrupt>:
   7e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -220,7 +220,7 @@ Disassembly of section .text:
  18c:	f0 e0       	ldi	r31, 0x00	; 0
  18e:	ee 0f       	add	r30, r30
  190:	ff 1f       	adc	r31, r31
- 192:	e0 5a       	subi	r30, 0xA0	; 160
+ 192:	e5 56       	subi	r30, 0x65	; 101
  194:	ff 4f       	sbci	r31, 0xFF	; 255
  196:	01 90       	ld	r0, Z+
  198:	f0 81       	ld	r31, Z
@@ -240,7 +240,7 @@ Disassembly of section .text:
  1b4:	aa 0f       	add	r26, r26
  1b6:	bb 1f       	adc	r27, r27
  1b8:	fd 01       	movw	r30, r26
- 1ba:	e0 5a       	subi	r30, 0xA0	; 160
+ 1ba:	e5 56       	subi	r30, 0x65	; 101
  1bc:	ff 4f       	sbci	r31, 0xFF	; 255
  1be:	01 90       	ld	r0, Z+
  1c0:	f0 81       	ld	r31, Z
@@ -260,7 +260,7 @@ Disassembly of section .text:
  1dc:	aa 0f       	add	r26, r26
  1de:	bb 1f       	adc	r27, r27
  1e0:	fd 01       	movw	r30, r26
- 1e2:	e0 5a       	subi	r30, 0xA0	; 160
+ 1e2:	e5 56       	subi	r30, 0x65	; 101
  1e4:	ff 4f       	sbci	r31, 0xFF	; 255
  1e6:	01 90       	ld	r0, Z+
  1e8:	f0 81       	ld	r31, Z
@@ -274,7 +274,7 @@ Disassembly of section .text:
  1f8:	ea f7       	brpl	.-6      	; 0x1f4 <set_mod+0x8a>
  1fa:	82 2b       	or	r24, r18
  1fc:	80 83       	st	Z, r24
- 1fe:	a8 59       	subi	r26, 0x98	; 152
+ 1fe:	ad 55       	subi	r26, 0x5D	; 93
  200:	bf 4f       	sbci	r27, 0xFF	; 255
  202:	ed 91       	ld	r30, X+
  204:	fc 91       	ld	r31, X
@@ -286,7 +286,7 @@ Disassembly of section .text:
  210:	f0 e0       	ldi	r31, 0x00	; 0
  212:	ee 0f       	add	r30, r30
  214:	ff 1f       	adc	r31, r31
- 216:	e0 5a       	subi	r30, 0xA0	; 160
+ 216:	e5 56       	subi	r30, 0x65	; 101
  218:	ff 4f       	sbci	r31, 0xFF	; 255
  21a:	01 90       	ld	r0, Z+
  21c:	f0 81       	ld	r31, Z
@@ -311,7 +311,7 @@ Disassembly of section .text:
  23e:	fe 01       	movw	r30, r28
  240:	ee 0f       	add	r30, r30
  242:	ff 1f       	adc	r31, r31
- 244:	e0 58       	subi	r30, 0x80	; 128
+ 244:	e5 54       	subi	r30, 0x45	; 69
  246:	ff 4f       	sbci	r31, 0xFF	; 255
  248:	80 81       	ld	r24, Z
  24a:	91 81       	ldd	r25, Z+1	; 0x01
@@ -345,7 +345,7 @@ Disassembly of section .text:
  280:	f0 e0       	ldi	r31, 0x00	; 0
  282:	ee 0f       	add	r30, r30
  284:	ff 1f       	adc	r31, r31
- 286:	e0 5a       	subi	r30, 0xA0	; 160
+ 286:	e5 56       	subi	r30, 0x65	; 101
  288:	ff 4f       	sbci	r31, 0xFF	; 255
  28a:	01 90       	ld	r0, Z+
  28c:	f0 81       	ld	r31, Z
@@ -365,7 +365,7 @@ Disassembly of section .text:
  2a8:	aa 0f       	add	r26, r26
  2aa:	bb 1f       	adc	r27, r27
  2ac:	fd 01       	movw	r30, r26
- 2ae:	e0 5a       	subi	r30, 0xA0	; 160
+ 2ae:	e5 56       	subi	r30, 0x65	; 101
  2b0:	ff 4f       	sbci	r31, 0xFF	; 255
  2b2:	01 90       	ld	r0, Z+
  2b4:	f0 81       	ld	r31, Z
@@ -385,7 +385,7 @@ Disassembly of section .text:
  2d0:	aa 0f       	add	r26, r26
  2d2:	bb 1f       	adc	r27, r27
  2d4:	fd 01       	movw	r30, r26
- 2d6:	e0 5a       	subi	r30, 0xA0	; 160
+ 2d6:	e5 56       	subi	r30, 0x65	; 101
  2d8:	ff 4f       	sbci	r31, 0xFF	; 255
  2da:	01 90       	ld	r0, Z+
  2dc:	f0 81       	ld	r31, Z
@@ -399,7 +399,7 @@ Disassembly of section .text:
  2ec:	ea f7       	brpl	.-6      	; 0x2e8 <Dio_voidSetpinchmode+0x8a>
  2ee:	82 2b       	or	r24, r18
  2f0:	80 83       	st	Z, r24
- 2f2:	a8 59       	subi	r26, 0x98	; 152
+ 2f2:	ad 55       	subi	r26, 0x5D	; 93
  2f4:	bf 4f       	sbci	r27, 0xFF	; 255
  2f6:	ed 91       	ld	r30, X+
  2f8:	fc 91       	ld	r31, X
@@ -411,7 +411,7 @@ Disassembly of section .text:
  304:	f0 e0       	ldi	r31, 0x00	; 0
  306:	ee 0f       	add	r30, r30
  308:	ff 1f       	adc	r31, r31
- 30a:	e0 5a       	subi	r30, 0xA0	; 160
+ 30a:	e5 56       	subi	r30, 0x65	; 101
  30c:	ff 4f       	sbci	r31, 0xFF	; 255
  30e:	01 90       	ld	r0, Z+
  310:	f0 81       	ld	r31, Z
@@ -440,7 +440,7 @@ Disassembly of section .text:
  33a:	91 f4       	brne	.+36     	; 0x360 <Dio_voidWritepinchannel+0x36>
  33c:	ee 0f       	add	r30, r30
  33e:	ff 1f       	adc	r31, r31
- 340:	e8 59       	subi	r30, 0x98	; 152
+ 340:	ed 55       	subi	r30, 0x5D	; 93
  342:	ff 4f       	sbci	r31, 0xFF	; 255
  344:	01 90       	ld	r0, Z+
  346:	f0 81       	ld	r31, Z
@@ -458,7 +458,7 @@ Disassembly of section .text:
  35e:	08 95       	ret
  360:	ee 0f       	add	r30, r30
  362:	ff 1f       	adc	r31, r31
- 364:	e8 59       	subi	r30, 0x98	; 152
+ 364:	ed 55       	subi	r30, 0x5D	; 93
  366:	ff 4f       	sbci	r31, 0xFF	; 255
  368:	01 90       	ld	r0, Z+
  36a:	f0 81       	ld	r31, Z
@@ -485,7 +485,7 @@ Disassembly of section .text:
  390:	f0 e0       	ldi	r31, 0x00	; 0
  392:	ee 0f       	add	r30, r30
  394:	ff 1f       	adc	r31, r31
- 396:	e0 59       	subi	r30, 0x90	; 144
+ 396:	e5 55       	subi	r30, 0x55	; 85
  398:	ff 4f       	sbci	r31, 0xFF	; 255
  39a:	01 90       	ld	r0, Z+
  39c:	f0 81       	ld	r31, Z
@@ -550,7 +550,7 @@ Disassembly of section .text:
  406:	51 f4       	brne	.+20     	; 0x41c <Dio_setportchmode+0x1c>
  408:	ee 0f       	add	r30, r30
  40a:	ff 1f       	adc	r31, r31
- 40c:	e0 5a       	subi	r30, 0xA0	; 160
+ 40c:	e5 56       	subi	r30, 0x65	; 101
  40e:	ff 4f       	sbci	r31, 0xFF	; 255
  410:	01 90       	ld	r0, Z+
  412:	f0 81       	ld	r31, Z
@@ -560,7 +560,7 @@ Disassembly of section .text:
  41a:	08 95       	ret
  41c:	ee 0f       	add	r30, r30
  41e:	ff 1f       	adc	r31, r31
- 420:	e0 5a       	subi	r30, 0xA0	; 160
+ 420:	e5 56       	subi	r30, 0x65	; 101
  422:	ff 4f       	sbci	r31, 0xFF	; 255
  424:	01 90       	ld	r0, Z+
  426:	f0 81       	ld	r31, Z
@@ -682,7 +682,7 @@ Disassembly of section .text:
  518:	30 e0       	ldi	r19, 0x00	; 0
  51a:	40 e0       	ldi	r20, 0x00	; 0
  51c:	50 e0       	ldi	r21, 0x00	; 0
- 51e:	0e 94 44 05 	call	0xa88	; 0xa88 <__udivmodsi4>
+ 51e:	0e 94 8e 05 	call	0xb1c	; 0xb1c <__udivmodsi4>
  522:	eb 85       	ldd	r30, Y+11	; 0x0b
  524:	fc 85       	ldd	r31, Y+12	; 0x0c
  526:	60 83       	st	Z, r22
@@ -692,7 +692,7 @@ Disassembly of section .text:
  52e:	30 e0       	ldi	r19, 0x00	; 0
  530:	40 e0       	ldi	r20, 0x00	; 0
  532:	50 e0       	ldi	r21, 0x00	; 0
- 534:	0e 94 44 05 	call	0xa88	; 0xa88 <__udivmodsi4>
+ 534:	0e 94 8e 05 	call	0xb1c	; 0xb1c <__udivmodsi4>
  538:	c9 01       	movw	r24, r18
  53a:	da 01       	movw	r26, r20
  53c:	6c 01       	movw	r12, r24
@@ -960,7 +960,7 @@ Disassembly of section .text:
  764:	0f 92       	push	r0
  766:	cd b7       	in	r28, 0x3d	; 61
  768:	de b7       	in	r29, 0x3e	; 62
- 76a:	3c e7       	ldi	r19, 0x7C	; 124
+ 76a:	37 eb       	ldi	r19, 0xB7	; 183
  76c:	a3 2e       	mov	r10, r19
  76e:	30 e0       	ldi	r19, 0x00	; 0
  770:	b3 2e       	mov	r11, r19
@@ -980,7 +980,7 @@ Disassembly of section .text:
  78c:	80 81       	ld	r24, Z
  78e:	60 e0       	ldi	r22, 0x00	; 0
  790:	0e 94 95 01 	call	0x32a	; 0x32a <Dio_voidWritepinchannel>
- 794:	98 e7       	ldi	r25, 0x78	; 120
+ 794:	93 eb       	ldi	r25, 0xB3	; 179
  796:	e9 2e       	mov	r14, r25
  798:	90 e0       	ldi	r25, 0x00	; 0
  79a:	f9 2e       	mov	r15, r25
@@ -989,7 +989,7 @@ Disassembly of section .text:
  7a0:	11 1f       	adc	r17, r17
  7a2:	00 0f       	add	r16, r16
  7a4:	11 1f       	adc	r17, r17
- 7a6:	00 54       	subi	r16, 0x40	; 64
+ 7a6:	05 50       	subi	r16, 0x05	; 5
  7a8:	1f 4f       	sbci	r17, 0xFF	; 255
  7aa:	f7 01       	movw	r30, r14
  7ac:	80 81       	ld	r24, Z
@@ -1016,7 +1016,7 @@ Disassembly of section .text:
  7da:	f1 1c       	adc	r15, r1
  7dc:	0f 5f       	subi	r16, 0xFF	; 255
  7de:	1f 4f       	sbci	r17, 0xFF	; 255
- 7e0:	fc e7       	ldi	r31, 0x7C	; 124
+ 7e0:	f7 eb       	ldi	r31, 0xB7	; 183
  7e2:	ef 16       	cp	r14, r31
  7e4:	f0 e0       	ldi	r31, 0x00	; 0
  7e6:	ff 06       	cpc	r15, r31
@@ -1053,28 +1053,28 @@ Disassembly of section .text:
  826:	08 95       	ret
 
 00000828 <Keypad_VidInit>:
- 828:	80 91 78 00 	lds	r24, 0x0078
+ 828:	80 91 b3 00 	lds	r24, 0x00B3
  82c:	61 e0       	ldi	r22, 0x01	; 1
  82e:	0e 94 2f 01 	call	0x25e	; 0x25e <Dio_voidSetpinchmode>
- 832:	80 91 79 00 	lds	r24, 0x0079
+ 832:	80 91 b4 00 	lds	r24, 0x00B4
  836:	61 e0       	ldi	r22, 0x01	; 1
  838:	0e 94 2f 01 	call	0x25e	; 0x25e <Dio_voidSetpinchmode>
- 83c:	80 91 7a 00 	lds	r24, 0x007A
+ 83c:	80 91 b5 00 	lds	r24, 0x00B5
  840:	61 e0       	ldi	r22, 0x01	; 1
  842:	0e 94 2f 01 	call	0x25e	; 0x25e <Dio_voidSetpinchmode>
- 846:	80 91 7b 00 	lds	r24, 0x007B
+ 846:	80 91 b6 00 	lds	r24, 0x00B6
  84a:	61 e0       	ldi	r22, 0x01	; 1
  84c:	0e 94 2f 01 	call	0x25e	; 0x25e <Dio_voidSetpinchmode>
- 850:	80 91 7c 00 	lds	r24, 0x007C
+ 850:	80 91 b7 00 	lds	r24, 0x00B7
  854:	62 e0       	ldi	r22, 0x02	; 2
  856:	0e 94 2f 01 	call	0x25e	; 0x25e <Dio_voidSetpinchmode>
- 85a:	80 91 7d 00 	lds	r24, 0x007D
+ 85a:	80 91 b8 00 	lds	r24, 0x00B8
  85e:	62 e0       	ldi	r22, 0x02	; 2
  860:	0e 94 2f 01 	call	0x25e	; 0x25e <Dio_voidSetpinchmode>
- 864:	80 91 7e 00 	lds	r24, 0x007E
+ 864:	80 91 b9 00 	lds	r24, 0x00B9
  868:	62 e0       	ldi	r22, 0x02	; 2
  86a:	0e 94 2f 01 	call	0x25e	; 0x25e <Dio_voidSetpinchmode>
- 86e:	80 91 7f 00 	lds	r24, 0x007F
+ 86e:	80 91 ba 00 	lds	r24, 0x00BA
  872:	62 e0       	ldi	r22, 0x02	; 2
  874:	0e 94 2f 01 	call	0x25e	; 0x25e <Dio_voidSetpinchmode>
  878:	08 95       	ret
@@ -1326,51 +1326,113 @@ Disassembly of section .text:
  a80:	0e 94 41 00 	call	0x82	; 0x82 <TWI_voidInitMaster>
  a84:	08 95       	ret
 
-00000a86 <main>:
- a86:	ff cf       	rjmp	.-2      	; 0xa86 <main>
+00000a86 <LCD_Menu2>:
+ a86:	0e 94 52 03 	call	0x6a4	; 0x6a4 <LCD_voidClear>
+ a8a:	80 e6       	ldi	r24, 0x60	; 96
+ a8c:	90 e0       	ldi	r25, 0x00	; 0
+ a8e:	0e 94 d6 02 	call	0x5ac	; 0x5ac <LCD_voidWriteString>
+ a92:	82 e0       	ldi	r24, 0x02	; 2
+ a94:	60 e0       	ldi	r22, 0x00	; 0
+ a96:	0e 94 26 03 	call	0x64c	; 0x64c <LCD_voidGoToSpecificPosition>
+ a9a:	8d e6       	ldi	r24, 0x6D	; 109
+ a9c:	90 e0       	ldi	r25, 0x00	; 0
+ a9e:	0e 94 d6 02 	call	0x5ac	; 0x5ac <LCD_voidWriteString>
+ aa2:	83 e0       	ldi	r24, 0x03	; 3
+ aa4:	60 e0       	ldi	r22, 0x00	; 0
+ aa6:	0e 94 26 03 	call	0x64c	; 0x64c <LCD_voidGoToSpecificPosition>
+ aaa:	87 e7       	ldi	r24, 0x77	; 119
+ aac:	90 e0       	ldi	r25, 0x00	; 0
+ aae:	0e 94 d6 02 	call	0x5ac	; 0x5ac <LCD_voidWriteString>
+ ab2:	08 95       	ret
 
-00000a88 <__udivmodsi4>:
- a88:	a1 e2       	ldi	r26, 0x21	; 33
- a8a:	1a 2e       	mov	r1, r26
- a8c:	aa 1b       	sub	r26, r26
- a8e:	bb 1b       	sub	r27, r27
- a90:	fd 01       	movw	r30, r26
- a92:	0d c0       	rjmp	.+26     	; 0xaae <__udivmodsi4_ep>
+00000ab4 <LCD_Menu1>:
+ ab4:	0e 94 52 03 	call	0x6a4	; 0x6a4 <LCD_voidClear>
+ ab8:	8e e7       	ldi	r24, 0x7E	; 126
+ aba:	90 e0       	ldi	r25, 0x00	; 0
+ abc:	0e 94 d6 02 	call	0x5ac	; 0x5ac <LCD_voidWriteString>
+ ac0:	82 e0       	ldi	r24, 0x02	; 2
+ ac2:	60 e0       	ldi	r22, 0x00	; 0
+ ac4:	0e 94 26 03 	call	0x64c	; 0x64c <LCD_voidGoToSpecificPosition>
+ ac8:	85 e8       	ldi	r24, 0x85	; 133
+ aca:	90 e0       	ldi	r25, 0x00	; 0
+ acc:	0e 94 d6 02 	call	0x5ac	; 0x5ac <LCD_voidWriteString>
+ ad0:	83 e0       	ldi	r24, 0x03	; 3
+ ad2:	60 e0       	ldi	r22, 0x00	; 0
+ ad4:	0e 94 26 03 	call	0x64c	; 0x64c <LCD_voidGoToSpecificPosition>
+ ad8:	8c e8       	ldi	r24, 0x8C	; 140
+ ada:	90 e0       	ldi	r25, 0x00	; 0
+ adc:	0e 94 d6 02 	call	0x5ac	; 0x5ac <LCD_voidWriteString>
+ ae0:	84 e0       	ldi	r24, 0x04	; 4
+ ae2:	60 e0       	ldi	r22, 0x00	; 0
+ ae4:	0e 94 26 03 	call	0x64c	; 0x64c <LCD_voidGoToSpecificPosition>
+ ae8:	84 e9       	ldi	r24, 0x94	; 148
+ aea:	90 e0       	ldi	r25, 0x00	; 0
+ aec:	0e 94 d6 02 	call	0x5ac	; 0x5ac <LCD_voidWriteString>
+ af0:	08 95       	ret
 
-00000a94 <__udivmodsi4_loop>:
- a94:	aa 1f       	adc	r26, r26
- a96:	bb 1f       	adc	r27, r27
- a98:	ee 1f       	adc	r30, r30
- a9a:	ff 1f       	adc	r31, r31
- a9c:	a2 17       	cp	r26, r18
- a9e:	b3 07       	cpc	r27, r19
- aa0:	e4 07       	cpc	r30, r20
- aa2:	f5 07       	cpc	r31, r21
- aa4:	20 f0       	brcs	.+8      	; 0xaae <__udivmodsi4_ep>
- aa6:	a2 1b       	sub	r26, r18
- aa8:	b3 0b       	sbc	r27, r19
- aaa:	e4 0b       	sbc	r30, r20
- aac:	f5 0b       	sbc	r31, r21
+00000af2 <APP_Init>:
+ af2:	0e 94 56 03 	call	0x6ac	; 0x6ac <LCD_voidInit>
+ af6:	08 95       	ret
 
-00000aae <__udivmodsi4_ep>:
- aae:	66 1f       	adc	r22, r22
- ab0:	77 1f       	adc	r23, r23
- ab2:	88 1f       	adc	r24, r24
- ab4:	99 1f       	adc	r25, r25
- ab6:	1a 94       	dec	r1
- ab8:	69 f7       	brne	.-38     	; 0xa94 <__udivmodsi4_loop>
- aba:	60 95       	com	r22
- abc:	70 95       	com	r23
- abe:	80 95       	com	r24
- ac0:	90 95       	com	r25
- ac2:	9b 01       	movw	r18, r22
- ac4:	ac 01       	movw	r20, r24
- ac6:	bd 01       	movw	r22, r26
- ac8:	cf 01       	movw	r24, r30
- aca:	08 95       	ret
+00000af8 <main>:
+ af8:	cf 93       	push	r28
+ afa:	df 93       	push	r29
+ afc:	0e 94 79 05 	call	0xaf2	; 0xaf2 <APP_Init>
+ b00:	c0 e9       	ldi	r28, 0x90	; 144
+ b02:	d1 e0       	ldi	r29, 0x01	; 1
+ b04:	0e 94 5a 05 	call	0xab4	; 0xab4 <LCD_Menu1>
+ b08:	80 ed       	ldi	r24, 0xD0	; 208
+ b0a:	97 e0       	ldi	r25, 0x07	; 7
+ b0c:	fe 01       	movw	r30, r28
+ b0e:	31 97       	sbiw	r30, 0x01	; 1
+ b10:	f1 f7       	brne	.-4      	; 0xb0e <main+0x16>
+ b12:	01 97       	sbiw	r24, 0x01	; 1
+ b14:	d9 f7       	brne	.-10     	; 0xb0c <main+0x14>
+ b16:	0e 94 43 05 	call	0xa86	; 0xa86 <LCD_Menu2>
+ b1a:	f4 cf       	rjmp	.-24     	; 0xb04 <main+0xc>
 
-00000acc <_exit>:
- acc:	f8 94       	cli
+00000b1c <__udivmodsi4>:
+ b1c:	a1 e2       	ldi	r26, 0x21	; 33
+ b1e:	1a 2e       	mov	r1, r26
+ b20:	aa 1b       	sub	r26, r26
+ b22:	bb 1b       	sub	r27, r27
+ b24:	fd 01       	movw	r30, r26
+ b26:	0d c0       	rjmp	.+26     	; 0xb42 <__udivmodsi4_ep>
 
-00000ace <__stop_program>:
- ace:	ff cf       	rjmp	.-2      	; 0xace <__stop_program>
+00000b28 <__udivmodsi4_loop>:
+ b28:	aa 1f       	adc	r26, r26
+ b2a:	bb 1f       	adc	r27, r27
+ b2c:	ee 1f       	adc	r30, r30
+ b2e:	ff 1f       	adc	r31, r31
+ b30:	a2 17       	cp	r26, r18
+ b32:	b3 07       	cpc	r27, r19
+ b34:	e4 07       	cpc	r30, r20
+ b36:	f5 07       	cpc	r31, r21
+ b38:	20 f0       	brcs	.+8      	; 0xb42 <__udivmodsi4_ep>
+ b3a:	a2 1b       	sub	r26, r18
+ b3c:	b3 0b       	sbc	r27, r19
+ b3e:	e4 0b       	sbc	r30, r20
+ b40:	f5 0b       	sbc	r31, r21
+
+00000b42 <__udivmodsi4_ep>:
+ b42:	66 1f       	adc	r22, r22
+ b44:	77 1f       	adc	r23, r23
+ b46:	88 1f       	adc	r24, r24
+ b48:	99 1f       	adc	r25, r25
+ b4a:	1a 94       	dec	r1
+ b4c:	69 f7       	brne	.-38     	; 0xb28 <__udivmodsi4_loop>
+ b4e:	60 95       	com	r22
+ b50:	70 95       	com	r23
+ b52:	80 95       	com	r24
+ b54:	90 95       	com	r25
+ b56:	9b 01       	movw	r18, r22
+ b58:	ac 01       	movw	r20, r24
+ b5a:	bd 01       	movw	r22, r26
+ b5c:	cf 01       	movw	r24, r30
+ b5e:	08 95       	ret
+
+00000b60 <_exit>:
+ b60:	f8 94       	cli
+
+00000b62 <__stop_program>:
+ b62:	ff cf       	rjmp	.-2      	; 0xb62 <__stop_program>

@@ -1,10 +1,10 @@
 Archive member included because of file (symbol)
 
-d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
                               ./HAL/LCD/Lcd_prog.o (__udivmodsi4)
-d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                              d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
-d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
                               ./MCAL/DIO/Dio_prog.o (__do_copy_data)
 
 Memory Configuration
@@ -20,16 +20,17 @@ signature        0x00840000         0x00000400         rw !x
 
 Linker script and memory map
 
-LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
 LOAD ./MCAL/TWI/TWI_Program.o
 LOAD ./MCAL/DIO/Dio_prog.o
 LOAD ./HAL/LCD/Lcd_prog.o
 LOAD ./HAL/KEYPAD/Keypad.o
 LOAD ./HAL/EEPROM/EEPROM_Program.o
+LOAD ./APP/APP.o
 LOAD ./main.o
-LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
-LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
-LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 
 .hash
  *(.hash)
@@ -121,9 +122,9 @@ LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xad0
+.text           0x00000000      0xb64
  *(.vectors)
- .vectors       0x00000000       0x54 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .vectors       0x00000000       0x54 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
                 0x00000000                __vector_default
  *(.vectors)
@@ -148,18 +149,18 @@ LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000054        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .init0         0x00000054        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000054                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000054        0xc d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .init2         0x00000054        0xc f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000060       0x16 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .init4         0x00000060       0x16 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
                 0x00000060                __do_copy_data
  *(.init4)
  *(.init5)
@@ -171,10 +172,10 @@ LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000076        0x8 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .init9         0x00000076        0x8 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
  *(.init9)
  *(.text)
- .text          0x0000007e        0x4 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .text          0x0000007e        0x4 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x0000007e                __vector_1
                 0x0000007e                __vector_12
                 0x0000007e                __bad_interrupt
@@ -201,10 +202,11 @@ LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text          0x00000082        0x0 ./HAL/LCD/Lcd_prog.o
  .text          0x00000082        0x0 ./HAL/KEYPAD/Keypad.o
  .text          0x00000082        0x0 ./HAL/EEPROM/EEPROM_Program.o
+ .text          0x00000082        0x0 ./APP/APP.o
  .text          0x00000082        0x0 ./main.o
- .text          0x00000082        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .text          0x00000082        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text          0x00000082        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000082        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x00000082        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000082        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
                 0x00000082                . = ALIGN (0x2)
  *(.text.*)
  .text.TWI_voidInitMaster
@@ -313,17 +315,26 @@ LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.EEPROM_voidInit
                 0x00000a7e        0x8 ./HAL/EEPROM/EEPROM_Program.o
                 0x00000a7e                EEPROM_voidInit
- .text.main     0x00000a86        0x2 ./main.o
-                0x00000a86                main
- .text.libgcc   0x00000a88       0x44 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00000a88                __udivmodsi4
- .text.libgcc   0x00000acc        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00000acc        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x00000acc                . = ALIGN (0x2)
+ .text.LCD_Menu2
+                0x00000a86       0x2e ./APP/APP.o
+                0x00000a86                LCD_Menu2
+ .text.LCD_Menu1
+                0x00000ab4       0x3e ./APP/APP.o
+                0x00000ab4                LCD_Menu1
+ .text.APP_Init
+                0x00000af2        0x6 ./APP/APP.o
+                0x00000af2                APP_Init
+ .text.main     0x00000af8       0x24 ./main.o
+                0x00000af8                main
+ .text.libgcc   0x00000b1c       0x44 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00000b1c                __udivmodsi4
+ .text.libgcc   0x00000b60        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000b60        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000b60                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000acc        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00000acc                exit
-                0x00000acc                _exit
+ .fini9         0x00000b60        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000b60                exit
+                0x00000b60                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -342,75 +353,78 @@ LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000acc        0x4 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000b60        0x4 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000ad0                _etext = .
+                0x00000b64                _etext = .
 
-.data           0x00800060       0x70 load address 0x00000ad0
+.data           0x00800060       0xac load address 0x00000b64
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
- .data          0x00800060        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
  .data          0x00800060        0x0 ./MCAL/TWI/TWI_Program.o
  .data          0x00800060        0x0 ./MCAL/DIO/Dio_prog.o
  .data          0x00800060        0x0 ./HAL/LCD/Lcd_prog.o
  .data          0x00800060        0x0 ./HAL/KEYPAD/Keypad.o
  .data          0x00800060        0x0 ./HAL/EEPROM/EEPROM_Program.o
- .data          0x00800060        0x0 ./main.o
- .data          0x00800060        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x00800060        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x00800060        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800060       0x3b ./APP/APP.o
+ .data          0x0080009b        0x0 ./main.o
+ .data          0x0080009b        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x0080009b        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080009b        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  *(.data*)
  .data.index_ddrr
-                0x00800060        0x8 ./MCAL/DIO/Dio_prog.o
-                0x00800060                index_ddrr
+                0x0080009b        0x8 ./MCAL/DIO/Dio_prog.o
+                0x0080009b                index_ddrr
  .data.index_port
-                0x00800068        0x8 ./MCAL/DIO/Dio_prog.o
-                0x00800068                index_port
+                0x008000a3        0x8 ./MCAL/DIO/Dio_prog.o
+                0x008000a3                index_port
  .data.index_pin
-                0x00800070        0x8 ./MCAL/DIO/Dio_prog.o
-                0x00800070                index_pin
- .data.ROW_PIN  0x00800078        0x4 ./HAL/KEYPAD/Keypad.o
-                0x00800078                ROW_PIN
- .data.COL_PIN  0x0080007c        0x4 ./HAL/KEYPAD/Keypad.o
-                0x0080007c                COL_PIN
+                0x008000ab        0x8 ./MCAL/DIO/Dio_prog.o
+                0x008000ab                index_pin
+ .data.ROW_PIN  0x008000b3        0x4 ./HAL/KEYPAD/Keypad.o
+                0x008000b3                ROW_PIN
+ .data.COL_PIN  0x008000b7        0x4 ./HAL/KEYPAD/Keypad.o
+                0x008000b7                COL_PIN
  *(.rodata)
  *(.rodata*)
  .rodata.Config_arr
-                0x00800080       0x40 ./MCAL/DIO/Dio_prog.o
-                0x00800080                Config_arr
+                0x008000bb       0x40 ./MCAL/DIO/Dio_prog.o
+                0x008000bb                Config_arr
  .rodata.KPD_u8SwitchVal
-                0x008000c0       0x10 ./HAL/KEYPAD/Keypad.o
-                0x008000c0                KPD_u8SwitchVal
+                0x008000fb       0x10 ./HAL/KEYPAD/Keypad.o
+                0x008000fb                KPD_u8SwitchVal
  *(.gnu.linkonce.d*)
-                0x008000d0                . = ALIGN (0x2)
-                0x008000d0                _edata = .
-                0x008000d0                PROVIDE (__data_end, .)
+                0x0080010c                . = ALIGN (0x2)
+ *fill*         0x0080010b        0x1 00
+                0x0080010c                _edata = .
+                0x0080010c                PROVIDE (__data_end, .)
 
-.bss            0x008000d0        0x0
-                0x008000d0                PROVIDE (__bss_start, .)
+.bss            0x0080010c        0x0
+                0x0080010c                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008000d0        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x008000d0        0x0 ./MCAL/TWI/TWI_Program.o
- .bss           0x008000d0        0x0 ./MCAL/DIO/Dio_prog.o
- .bss           0x008000d0        0x0 ./HAL/LCD/Lcd_prog.o
- .bss           0x008000d0        0x0 ./HAL/KEYPAD/Keypad.o
- .bss           0x008000d0        0x0 ./HAL/EEPROM/EEPROM_Program.o
- .bss           0x008000d0        0x0 ./main.o
- .bss           0x008000d0        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x008000d0        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x008000d0        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080010c        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x0080010c        0x0 ./MCAL/TWI/TWI_Program.o
+ .bss           0x0080010c        0x0 ./MCAL/DIO/Dio_prog.o
+ .bss           0x0080010c        0x0 ./HAL/LCD/Lcd_prog.o
+ .bss           0x0080010c        0x0 ./HAL/KEYPAD/Keypad.o
+ .bss           0x0080010c        0x0 ./HAL/EEPROM/EEPROM_Program.o
+ .bss           0x0080010c        0x0 ./APP/APP.o
+ .bss           0x0080010c        0x0 ./main.o
+ .bss           0x0080010c        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x0080010c        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080010c        0x0 f:/nti/avr/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  *(.bss*)
  *(COMMON)
-                0x008000d0                PROVIDE (__bss_end, .)
-                0x00000ad0                __data_load_start = LOADADDR (.data)
-                0x00000b40                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080010c                PROVIDE (__bss_end, .)
+                0x00000b64                __data_load_start = LOADADDR (.data)
+                0x00000c10                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008000d0        0x0
-                0x008000d0                PROVIDE (__noinit_start, .)
+.noinit         0x0080010c        0x0
+                0x0080010c                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008000d0                PROVIDE (__noinit_end, .)
-                0x008000d0                _end = .
-                0x008000d0                PROVIDE (__heap_start, .)
+                0x0080010c                PROVIDE (__noinit_end, .)
+                0x0080010c                _end = .
+                0x0080010c                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)

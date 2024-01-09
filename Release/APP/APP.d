@@ -1,4 +1,4 @@
-main.o main.o: ../main.c ../APP/APP.h \
+APP/APP.o APP/APP.o: ../APP/APP.c ../APP/APP.h \
   E:\NTI_4_Months\WORKSPACE\Smart_Home\LIB/STD.h \
   E:\NTI_4_Months\WORKSPACE\Smart_Home\HAL\LCD/Lcd.h \
   E:\NTI_4_Months\WORKSPACE\Smart_Home\MCAL\DIO/Dio_int.h \

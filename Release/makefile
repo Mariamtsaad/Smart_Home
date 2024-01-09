@@ -13,6 +13,7 @@ RM := rm -rf
 -include HAL/LCD/subdir.mk
 -include HAL/KEYPAD/subdir.mk
 -include HAL/EEPROM/subdir.mk
+-include APP/subdir.mk
 -include subdir.mk
 -include objects.mk
 

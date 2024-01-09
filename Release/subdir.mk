@@ -17,7 +17,7 @@ C_DEPS += \
 %.o: ../%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: AVR Compiler'
-	avr-gcc -I"D:\ATMEGA32\Smart_Home\LIB" -I"D:\ATMEGA32\Smart_Home\MCAL\DIO" -I"D:\ATMEGA32\Smart_Home\MCAL\TWI" -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	avr-gcc -I"E:\NTI_4_Months\WORKSPACE\Smart_Home\LIB" -I"E:\NTI_4_Months\WORKSPACE\Smart_Home\MCAL\DIO" -I"E:\NTI_4_Months\WORKSPACE\Smart_Home\MCAL\TWI" -I"E:\NTI_4_Months\WORKSPACE\Smart_Home\HAL\LCD" -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
