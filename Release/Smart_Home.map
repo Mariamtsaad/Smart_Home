@@ -1,0 +1,492 @@
+Archive member included because of file (symbol)
+
+d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                              ./HAL/LCD/Lcd_prog.o (__udivmodsi4)
+d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./MCAL/DIO/Dio_prog.o (__do_copy_data)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD ./MCAL/TWI/TWI_Program.o
+LOAD ./MCAL/DIO/Dio_prog.o
+LOAD ./HAL/LCD/Lcd_prog.o
+LOAD ./HAL/KEYPAD/Keypad.o
+LOAD ./HAL/EEPROM/EEPROM_Program.o
+LOAD ./main.o
+LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xad0
+ *(.vectors)
+ .vectors       0x00000000       0x54 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x16 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000076        0x8 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x0000007e        0x4 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000007e                __vector_1
+                0x0000007e                __vector_12
+                0x0000007e                __bad_interrupt
+                0x0000007e                __vector_6
+                0x0000007e                __vector_3
+                0x0000007e                __vector_11
+                0x0000007e                __vector_13
+                0x0000007e                __vector_17
+                0x0000007e                __vector_19
+                0x0000007e                __vector_7
+                0x0000007e                __vector_5
+                0x0000007e                __vector_4
+                0x0000007e                __vector_9
+                0x0000007e                __vector_2
+                0x0000007e                __vector_15
+                0x0000007e                __vector_8
+                0x0000007e                __vector_14
+                0x0000007e                __vector_10
+                0x0000007e                __vector_16
+                0x0000007e                __vector_18
+                0x0000007e                __vector_20
+ .text          0x00000082        0x0 ./MCAL/TWI/TWI_Program.o
+ .text          0x00000082        0x0 ./MCAL/DIO/Dio_prog.o
+ .text          0x00000082        0x0 ./HAL/LCD/Lcd_prog.o
+ .text          0x00000082        0x0 ./HAL/KEYPAD/Keypad.o
+ .text          0x00000082        0x0 ./HAL/EEPROM/EEPROM_Program.o
+ .text          0x00000082        0x0 ./main.o
+ .text          0x00000082        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x00000082        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000082        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000082                . = ALIGN (0x2)
+ *(.text.*)
+ .text.TWI_voidInitMaster
+                0x00000082       0x1e ./MCAL/TWI/TWI_Program.o
+                0x00000082                TWI_voidInitMaster
+ .text.TWI_voidStartCondition
+                0x000000a0       0x1c ./MCAL/TWI/TWI_Program.o
+                0x000000a0                TWI_voidStartCondition
+ .text.TWI_voidRepeatedStartCondition
+                0x000000bc       0x1c ./MCAL/TWI/TWI_Program.o
+                0x000000bc                TWI_voidRepeatedStartCondition
+ .text.TWI_voidStopCondition
+                0x000000d8        0xe ./MCAL/TWI/TWI_Program.o
+                0x000000d8                TWI_voidStopCondition
+ .text.TWI_voidSendSlaveAdressWithWrite
+                0x000000e6       0x26 ./MCAL/TWI/TWI_Program.o
+                0x000000e6                TWI_voidSendSlaveAdressWithWrite
+ .text.TWI_voidSendSlaveAdressWithRead
+                0x0000010c       0x26 ./MCAL/TWI/TWI_Program.o
+                0x0000010c                TWI_voidSendSlaveAdressWithRead
+ .text.TWI_voidSendMasterDataByte
+                0x00000132       0x18 ./MCAL/TWI/TWI_Program.o
+                0x00000132                TWI_voidSendMasterDataByte
+ .text.TWI_voidReceiveMasterDataByte
+                0x0000014a       0x10 ./MCAL/TWI/TWI_Program.o
+                0x0000014a                TWI_voidReceiveMasterDataByte
+ .text.TWI_voidReadACK
+                0x0000015a        0x8 ./MCAL/TWI/TWI_Program.o
+                0x0000015a                TWI_voidReadACK
+ .text.TWI_voidReadNONACK
+                0x00000162        0x8 ./MCAL/TWI/TWI_Program.o
+                0x00000162                TWI_voidReadNONACK
+ .text.set_mod  0x0000016a       0xcc ./MCAL/DIO/Dio_prog.o
+                0x0000016a                set_mod
+ .text.Dio_voidInit
+                0x00000236       0x28 ./MCAL/DIO/Dio_prog.o
+                0x00000236                Dio_voidInit
+ .text.Dio_voidSetpinchmode
+                0x0000025e       0xcc ./MCAL/DIO/Dio_prog.o
+                0x0000025e                Dio_voidSetpinchmode
+ .text.Dio_voidWritepinchannel
+                0x0000032a       0x5c ./MCAL/DIO/Dio_prog.o
+                0x0000032a                Dio_voidWritepinchannel
+ .text.Dio_voidReadpinchannel
+                0x00000386       0x30 ./MCAL/DIO/Dio_prog.o
+                0x00000386                Dio_voidReadpinchannel
+ .text.Dio_readportchannel
+                0x000003b6       0x28 ./MCAL/DIO/Dio_prog.o
+                0x000003b6                Dio_readportchannel
+ .text.Dio_SETportchannel
+                0x000003de       0x22 ./MCAL/DIO/Dio_prog.o
+                0x000003de                Dio_SETportchannel
+ .text.Dio_setportchmode
+                0x00000400       0x2e ./MCAL/DIO/Dio_prog.o
+                0x00000400                Dio_setportchmode
+ .text.private_voidWriteHalfPort
+                0x0000042e       0x38 ./HAL/LCD/Lcd_prog.o
+ .text.LCD_voidSendChar
+                0x00000466       0x64 ./HAL/LCD/Lcd_prog.o
+                0x00000466                LCD_voidSendChar
+ .text.LCD_voidWriteNumber
+                0x000004ca       0xe2 ./HAL/LCD/Lcd_prog.o
+                0x000004ca                LCD_voidWriteNumber
+ .text.LCD_voidWriteString
+                0x000005ac       0x3c ./HAL/LCD/Lcd_prog.o
+                0x000005ac                LCD_voidWriteString
+ .text.LCD_voidSendCmnd
+                0x000005e8       0x64 ./HAL/LCD/Lcd_prog.o
+                0x000005e8                LCD_voidSendCmnd
+ .text.LCD_voidGoToSpecificPosition
+                0x0000064c       0x40 ./HAL/LCD/Lcd_prog.o
+                0x0000064c                LCD_voidGoToSpecificPosition
+ .text.LCD_voidShift
+                0x0000068c       0x18 ./HAL/LCD/Lcd_prog.o
+                0x0000068c                LCD_voidShift
+ .text.LCD_voidClear
+                0x000006a4        0x8 ./HAL/LCD/Lcd_prog.o
+                0x000006a4                LCD_voidClear
+ .text.LCD_voidInit
+                0x000006ac       0x9a ./HAL/LCD/Lcd_prog.o
+                0x000006ac                LCD_voidInit
+ .text.Keypad_U8GetKeyPressed
+                0x00000746       0xe2 ./HAL/KEYPAD/Keypad.o
+                0x00000746                Keypad_U8GetKeyPressed
+ .text.Keypad_VidInit
+                0x00000828       0x52 ./HAL/KEYPAD/Keypad.o
+                0x00000828                Keypad_VidInit
+ .text.EEPROM_voidWritePage
+                0x0000087a       0x5c ./HAL/EEPROM/EEPROM_Program.o
+                0x0000087a                EEPROM_voidWritePage
+ .text.EEPROM_voidSendDataPage
+                0x000008d6       0x12 ./HAL/EEPROM/EEPROM_Program.o
+                0x000008d6                EEPROM_voidSendDataPage
+ .text.EEPROM_voidReadByte
+                0x000008e8       0x3c ./HAL/EEPROM/EEPROM_Program.o
+                0x000008e8                EEPROM_voidReadByte
+ .text.EEPROM_voidWriteByte
+                0x00000924       0x38 ./HAL/EEPROM/EEPROM_Program.o
+                0x00000924                EEPROM_voidWriteByte
+ .text.EEPROM_voidReadPage
+                0x0000095c       0x8a ./HAL/EEPROM/EEPROM_Program.o
+                0x0000095c                EEPROM_voidReadPage
+ .text.EEPROM_u8Search
+                0x000009e6       0x98 ./HAL/EEPROM/EEPROM_Program.o
+                0x000009e6                EEPROM_u8Search
+ .text.EEPROM_voidInit
+                0x00000a7e        0x8 ./HAL/EEPROM/EEPROM_Program.o
+                0x00000a7e                EEPROM_voidInit
+ .text.main     0x00000a86        0x2 ./main.o
+                0x00000a86                main
+ .text.libgcc   0x00000a88       0x44 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00000a88                __udivmodsi4
+ .text.libgcc   0x00000acc        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000acc        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000acc                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000acc        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000acc                exit
+                0x00000acc                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000acc        0x4 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000ad0                _etext = .
+
+.data           0x00800060       0x70 load address 0x00000ad0
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 ./MCAL/TWI/TWI_Program.o
+ .data          0x00800060        0x0 ./MCAL/DIO/Dio_prog.o
+ .data          0x00800060        0x0 ./HAL/LCD/Lcd_prog.o
+ .data          0x00800060        0x0 ./HAL/KEYPAD/Keypad.o
+ .data          0x00800060        0x0 ./HAL/EEPROM/EEPROM_Program.o
+ .data          0x00800060        0x0 ./main.o
+ .data          0x00800060        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00800060        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ *(.data*)
+ .data.index_ddrr
+                0x00800060        0x8 ./MCAL/DIO/Dio_prog.o
+                0x00800060                index_ddrr
+ .data.index_port
+                0x00800068        0x8 ./MCAL/DIO/Dio_prog.o
+                0x00800068                index_port
+ .data.index_pin
+                0x00800070        0x8 ./MCAL/DIO/Dio_prog.o
+                0x00800070                index_pin
+ .data.ROW_PIN  0x00800078        0x4 ./HAL/KEYPAD/Keypad.o
+                0x00800078                ROW_PIN
+ .data.COL_PIN  0x0080007c        0x4 ./HAL/KEYPAD/Keypad.o
+                0x0080007c                COL_PIN
+ *(.rodata)
+ *(.rodata*)
+ .rodata.Config_arr
+                0x00800080       0x40 ./MCAL/DIO/Dio_prog.o
+                0x00800080                Config_arr
+ .rodata.KPD_u8SwitchVal
+                0x008000c0       0x10 ./HAL/KEYPAD/Keypad.o
+                0x008000c0                KPD_u8SwitchVal
+ *(.gnu.linkonce.d*)
+                0x008000d0                . = ALIGN (0x2)
+                0x008000d0                _edata = .
+                0x008000d0                PROVIDE (__data_end, .)
+
+.bss            0x008000d0        0x0
+                0x008000d0                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x008000d0        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x008000d0        0x0 ./MCAL/TWI/TWI_Program.o
+ .bss           0x008000d0        0x0 ./MCAL/DIO/Dio_prog.o
+ .bss           0x008000d0        0x0 ./HAL/LCD/Lcd_prog.o
+ .bss           0x008000d0        0x0 ./HAL/KEYPAD/Keypad.o
+ .bss           0x008000d0        0x0 ./HAL/EEPROM/EEPROM_Program.o
+ .bss           0x008000d0        0x0 ./main.o
+ .bss           0x008000d0        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x008000d0        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x008000d0        0x0 d:/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ *(.bss*)
+ *(COMMON)
+                0x008000d0                PROVIDE (__bss_end, .)
+                0x00000ad0                __data_load_start = LOADADDR (.data)
+                0x00000b40                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008000d0        0x0
+                0x008000d0                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008000d0                PROVIDE (__noinit_end, .)
+                0x008000d0                _end = .
+                0x008000d0                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Smart_Home.elf elf32-avr)
+LOAD linker stubs

@@ -10,7 +10,7 @@
 
 #include "Dio_int.h" 
 #include "Lcd_config.h"
-
+#include "Std.h"
 
 /* Macros For LCD Shifting Direction */
 #define LCD_SHIFT_LEFT          0

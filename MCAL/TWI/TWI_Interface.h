@@ -10,13 +10,14 @@
 #ifndef TWI_INTERFACE_H_
 #define TWI_INTERFACE_H_
 
+#include"Std.h"
 
-void TWI_voidInitMaster (u8 Copy_u8Adress) ;
-void TWI_voidStartCondition (void) ;
-void TWI_voidRepeatedStartCondition (void) ;
-void TWI_voidStopCondition (void) ;
-void TWI_voidSendSlaveAdressWithRead (u8 Copy_u8SlaveAdress) ;
-void TWI_voidSendSlaveAdressWithWrite(u8 Copy_u8SlaveAdress) ;
+void TWI_voidInitMaster (u8 Copy_u8Adress);
+void TWI_voidStartCondition (void);
+void TWI_voidRepeatedStartCondition (void);
+void TWI_voidStopCondition (void);
+void TWI_voidSendSlaveAdressWithRead (u8 Copy_u8SlaveAdress);
+void TWI_voidSendSlaveAdressWithWrite(u8 Copy_u8SlaveAdress);
 void TWI_voidSendMasterDataByte (u8 Copy_u8TxData) ;
 u8   TWI_voidReceiveMasterDataByte (void) ;
 
